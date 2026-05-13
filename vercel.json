@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --prefix blog-api && npm install --prefix blog-frontend",
+  "buildCommand": "npm run build --prefix blog-frontend",
+  "outputDirectory": "blog-frontend/dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/server" }
+  ],
+  "functions": {
+    "api/server.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
+}

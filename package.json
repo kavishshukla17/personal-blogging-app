@@ -1,0 +1,8 @@
+{
+  "name": "personal-blogging-app",
+  "private": true,
+  "description": "Monorepo root for Vercel — API + frontend live in blog-api/ and blog-frontend/",
+  "engines": {
+    "node": ">=20"
+  }
+}
