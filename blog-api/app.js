@@ -40,6 +40,12 @@ app.use(
       if (process.env.CLIENT_ORIGIN && origin === process.env.CLIENT_ORIGIN) {
         return cb(null, true);
       }
+      if (
+        !process.env.VERCEL &&
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)
+      ) {
+        return cb(null, true);
+      }
       if (corsStatic.includes(origin)) return cb(null, true);
       try {
         const { hostname } = new URL(origin);
