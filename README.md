@@ -92,4 +92,4 @@ Optional: `JWT_EXPIRES_IN`, `CLIENT_ORIGIN` (custom domain CORS). See `blog-api/
 
 ## License
 
-Private / personal project — adjust as you prefer.
+Personal Project
